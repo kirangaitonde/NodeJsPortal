@@ -1,0 +1,396 @@
+﻿
+<html lang="en">
+    <head>
+        <title><%= title %></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+        <link href="styles/scrolling-nav.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="styles/main.css" type="text/css"/>
+
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    </head>
+
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+        <!-- Navigation - smooth scrolling-->
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="images/logo.jpg" alt="Brady"></a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
+                    <ul class="nav navbar-nav ">
+                        <li class="hidden">
+                            <a class="page-scroll" href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#user"><span class="scroll-elements">User</span></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#project"><span class="scroll-elements">Project</span></a>
+                        </li>       
+                        <li>
+                            <a href="/home"><span class="scroll-elements">Go Back</span></a>
+                        </li>
+                        <li>
+                            <a href="/signout" class="" title="sign out"><span class="scroll-elements">Logout </span> <span class="scroll-elements glyphicon glyphicon-log-out"></span></a>
+                        </li>
+                    </ul>                  
+
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Assign users to project Section -->
+        <section id="user-project" class="intro-section">
+            <div class="container">
+                <h1>User to Project</h1>
+                <hr class="section-heading-spacer"> 
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 center-align">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>                                                
+                        <div class="panel panel-default">
+                            <div class="panel-heading"> <strong class="">Assign user/project</strong>
+
+                            </div>
+
+
+                            <div class="panel-body">
+                                <form class="form-horizontal" role="form" method="post" action="/assignuserproject">
+                                    <div class="form-group error-message">
+                                        <% if(typeof(assignUserProjMessage) !== 'undefined') {%>
+                                        <span><%= assignUserProjMessage %></span>
+                                        <% } %>
+                                    </div>                                    
+                                    <div class="form-group">                                        
+                                        <label for="username" class="col-sm-3 control-label">User Name</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="username" id="username" placeholder="User Name" required>                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                        
+                                        <label for="projectname" class="col-sm-3 control-label">Project Name</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="projectname" id="projectname" placeholder="Project Name" required>                                            
+                                        </div>
+                                    </div>     
+
+                                    <div class="form-group last">
+                                        <div class="col-sm-offset-3 col-sm-9">				
+                                            <input class="btn btn-success btn-sm" type="submit" value="Assign">                                           
+                                            <button type="reset" class="btn btn-default btn-sm">Reset</button>                                            
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>                                                   
+                        </div>  
+                    </div>
+
+                    <div class="col-lg-6 col-sm-6 center-align">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>                                                
+                        <div class="panel panel-default">
+                            <div class="panel-heading"> <strong class="">Unassign user/project</strong>
+
+                            </div>
+
+
+                            <div class="panel-body">
+                                <form class="form-horizontal" role="form" method="post" action="/unassignuserproject">
+                                    <div class="form-group error-message">
+                                        <% if(typeof(unassignUserProjMessage) !== 'undefined') {%>
+                                        <span><%= unassignUserProjMessage %></span>
+                                        <% } %>
+                                    </div>                                    
+                                    <div class="form-group">                                        
+                                        <label for="username" class="col-sm-3 control-label">User Name</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="username" id="username" placeholder="User Name" required>                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                        
+                                        <label for="projectname" class="col-sm-3 control-label">Project Name</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="projectname" id="projectname" placeholder="Project Name" required>                                            
+                                        </div>
+                                    </div>     
+
+                                    <div class="form-group last">
+                                        <div class="col-sm-offset-3 col-sm-9">				
+                                            <input class="btn btn-success btn-sm" type="submit" value="Unassign">                                           
+                                            <button type="reset" class="btn btn-default btn-sm">Reset</button>                                            
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>                                                   
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Add User -->
+        <section id="user" class="user-section">
+            <div class="container">
+                <h1>User</h1>
+                <hr class="section-heading-spacer"> 
+                <div class="row">
+                   
+
+                    <div class="col-lg-6 col-sm-6 center-align">
+                        <br>
+                        <br>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading"> <strong class="">Add User</strong>
+
+                            </div>
+
+
+                            <div class="panel-body">
+                                <form class="form-horizontal" role="form" method="post" action="/adduser">
+                                    <div class="form-group error-message">
+                                        <% if(typeof(addUserMessage) !== 'undefined') {%>
+                                        <span><%= addUserMessage %></span>
+                                        <% } %>
+                                    </div>                                    
+                                    <div class="form-group">                                        
+                                        <label for="username" class="col-sm-3 control-label">Username</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                        
+                                        <label for="password" class="col-sm-3 control-label">Password</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="password" id="password" placeholder="Password" required>                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                        
+                                        <label for="firstname" class="col-sm-3 control-label">First Name</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name" required>                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                        
+                                        <label for="lastname" class="col-sm-3 control-label">Last Name</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name" required>                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                        
+                                        <label for="emaiId" class="col-sm-3 control-label">Email Id</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="email" class="form-control" name="emailId" id="emailId" placeholder="Email Id" required>                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                        
+                                        <label for="address1" class="col-sm-3 control-label">Address1</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="address1" id="address1" placeholder="Address1" required>                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                        
+                                        <label for="address2" class="col-sm-3 control-label">Address2</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="address2" id="address2" placeholder="Address2" required>                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                        
+                                        <label for="skypd" class="col-sm-3 control-label">Skyspark Pwd</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="skypd" id="skypd" placeholder="Skyspark Pwd" required>                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                        
+                                        <label for="role" class="col-sm-3 control-label">Role</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="role" id="role" placeholder="Role" required>                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group last">
+                                        <div class="col-sm-offset-3 col-sm-9">				
+                                            <input class="btn btn-success btn-sm" type="submit" value="Add User">                                           
+                                            <button type="reset" class="btn btn-default btn-sm">Reset</button>                                            
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>                                                   
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 center-align">
+                        <br>
+                        <br>
+                                                                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading"> <strong class="">Remove User</strong>
+
+                            </div>
+
+
+                            <div class="panel-body">
+                                <form class="form-horizontal" role="form" method="post" action="/removeuser">
+                                    <div class="form-group error-message">
+                                        <% if(typeof(removeUserMessage) !== 'undefined') {%>
+                                        <span><%= removeUserMessage %></span>
+                                        <% } %>
+                                    </div>                                    
+                                    <div class="form-group">                                        
+                                        <label for="username" class="col-sm-3 control-label">User Name</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="username" id="username" placeholder="User Name" required>                                            
+                                        </div>
+                                    </div>                                    
+
+                                    <div class="form-group last">
+                                        <div class="col-sm-offset-3 col-sm-9">				
+                                            <input class="btn btn-success btn-sm" type="submit" value="Remove user">                                           
+                                            <button type="reset" class="btn btn-default btn-sm">Reset</button>                                            
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>                                                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>  
+
+
+        <!-- Add project -->
+        <section id="project" class="project-section">
+            <div class="container">
+                <h1>Project</h1>
+                <hr class="section-heading-spacer"> 
+                <div class="row">                    
+
+                    <div class="col-lg-6 col-sm-6 center-align">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading"> <strong class="">Add Project</strong>
+
+                            </div>
+
+
+                            <div class="panel-body">
+                                <form class="form-horizontal" role="form" method="post" action="/addproject">
+                                    <div class="form-group error-message">
+                                        <% if(typeof(addProjMessage) !== 'undefined') {%>
+                                        <span><%= addProjMessage %></span>
+                                        <% } %>
+                                    </div>                                    
+                                    <div class="form-group">                                        
+                                        <label for="projectname" class="col-sm-3 control-label">Project Name</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="projectname" id="projectname" placeholder="Project Name" required>                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                        
+                                        <label for="projecturl" class="col-sm-3 control-label">Project URL</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="projecturl" id="projecturl" placeholder="Project URL" required>                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                        
+                                        <label for="projectdesc" class="col-sm-3 control-label">Project Description</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="projectdesc" id="projectdesc" placeholder="Project Description" required>                                            
+                                        </div>
+                                    </div>                                  
+
+                                    <div class="form-group last">
+                                        <div class="col-sm-offset-3 col-sm-9">				
+                                            <input class="btn btn-success btn-sm" type="submit" value="Add Project">                                           
+                                            <button type="reset" class="btn btn-default btn-sm">Reset</button>                                            
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>                                                   
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 center-align">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                                                                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading"> <strong class="">Remove Project</strong>
+
+                            </div>
+
+
+                            <div class="panel-body">
+                                <form class="form-horizontal" role="form" method="post" action="/removeproject">
+                                    <div class="form-group error-message">
+                                        <% if(typeof(removeProjMessage) !== 'undefined') {%>
+                                        <span><%= removeProjMessage %></span>
+                                        <% } %>
+                                    </div>                                    
+                                    <div class="form-group">                                        
+                                        <label for="projectname" class="col-sm-3 control-label">Project Name</label>
+                                        <div class="col-sm-9">                                            
+                                            <input type="text" class="form-control" name="projectname" id="projectname" placeholder="Project Name" required>                                            
+                                        </div>
+                                    </div>                                    
+
+                                    <div class="form-group last">
+                                        <div class="col-sm-offset-3 col-sm-9">				
+                                            <input class="btn btn-success btn-sm" type="submit" value="Remove project">                                           
+                                            <button type="reset" class="btn btn-default btn-sm">Reset</button>                                            
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>                                                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>  
+
+
+        <!-- Drop down java script -->
+        <script src="js/dropdown.js"></script>
+        <!-- Scrolling Nav JavaScript -->
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/scrolling-nav.js"></script>
+        <script src="js/read-facts.js"></script>
+    </body> 
+</html>                                	

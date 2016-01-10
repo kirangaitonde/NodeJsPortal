@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dragula/dist/dragula.css" rel="stylesheet" type="text/css"/>
+    <style>
+
+      .wrapper div div{
+        background: #FCE8FB;
+        margin: 12px 6px 12px 2px;
+      }
+
+    </style>
+    
+  </head>
+  <body>
+
+    <div class='wrapper' style="  border: black 3px solid;">
+      <div id='left1' class='container' style="  border: black 1px solid;">
+        <div>You can move these elements between these two containers</div>
+        <div>Moving them anywhere else isn't quite possible</div>
+        <div>There's also the possibility of moving elements around in the same container, changing their position</div>
+      </div>
+      <div id='right1' class='container' style="  border: black 1px solid;">
+        <div>This is the default use case. You only need to specify the containers you want to use</div>
+        <div>More interactive use cases lie ahead</div>
+        <div>Make sure to check out the <a href='https://github.com/bevacqua/dragula#readme'>documentation on GitHub!</a></div>
+      </div>
+    </div>
+
+	<script src="dragula/dist/dragula.min.js" type="text/javascript"></script>
+    <script src="js/drag.js"></script>
+  </body>
+</html>

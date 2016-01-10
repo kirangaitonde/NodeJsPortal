@@ -1,0 +1,387 @@
+﻿
+<html lang="en">
+    <head>
+        <title><%= title %></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+        <link href="styles/scrolling-nav.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="styles/main.css" type="text/css"/>
+
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    </head>
+
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+        <!-- Navigation - smooth scrolling-->
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="images/logo.jpg" alt="Brady"></a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="hidden">
+                            <a class="page-scroll" href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#about"><span class="scroll-elements">About</span></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#blog"><span class="scroll-elements">Blog</span></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#contact"><span class="scroll-elements">Contact</span></a>
+                        </li>
+                        <li>
+                            <a class="" href="/login"><span class="scroll-elements glyphicon glyphicon-log-in"></span> <span class="scroll-elements"> Login</span></a>
+                        </li>
+                    </ul>         
+                </div>
+            </div>
+        </nav>
+
+        <!-- login bar - bottom-->
+
+        <nav class="navbar-login navbar-default navbar-fixed-bottom" role="navigation">
+            <div class="container">
+                <div>  
+                    <form class="navbar-form navbar-right" role="form" method="post" action="/login">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Username" required> 
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                        </div>                          
+                        <input class="btn btn-default" type="submit" value="Sign In">
+                        <br>
+                        <div class="checkbox">
+                            <label class="remember-me"><input type="checkbox" class="form-control" name ="rememberme" id="rememberme"> Remember me</label>
+                            <div class="error-message">  <% if(typeof(errorMessage) !== 'undefined') {%>
+                                <span><%= errorMessage %></span>
+                                <% } %> </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Intro Section -->
+        <section id="intro" class="intro-section index-image">
+            <div class="container intro-container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="inner-page">
+                    <h3 class="center-align text-brady-blue">Brady Intelligent Services(BIS) enable intelligent buildings by taking the data that building systems produce and
+                        translating them into actionable, outcome-oriented recommendations that help you realize your business mission.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-sm-5  text-left">                        
+                        <h2 class="text-brady-blue">What can <strong>Intelligent Services</strong><br>
+                            do for you ?</h2>
+
+                        <div class="feature-box">
+                            <div class="feature-box-icon">
+                                <i class="icon-group"></i>
+                            </div>
+                            <div class="feature-box-info">   
+                                <p class="tall">Brady can provide a customized solution that fits your needs. Solutions can include:</p>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box-icon">
+                                <i class="icon-adjust"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <p class="tall"><strong class="text-brady-blue">Remote Monitoring</strong> - Have an additional set of eyes to help monitor your building.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box-icon">
+                                <i class="icon-group"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <p class="tall"><strong class="text-brady-blue">Diagnostics</strong> - Identify inefficiencies in building operations otherwise difficult to locate.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box-icon">
+                                <i class="icon-file"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <p class="tall"><strong class="text-brady-blue">Energy Management</strong> - Measure and analyze the impact of system inefficiencies on energy consumption so that you can prioritize your actions.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box-icon">
+                                <i class="icon-google-plus"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <p class="tall"><strong class="text-brady-blue">Resource Management</strong> - Support for your organization with additional remote and on-site resources- freeing your associates to focus on important issues.</p>
+                            </div>
+                        </div>                                
+                        <div class="feature-box">
+                            <div class="feature-box-icon">
+                                <i class="icon-adjust"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <p class="tall"><strong class="text-brady-blue">Expert Advice</strong> - Guidance as you operate your building at the optimum level of comfort and energy usage.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-sm-1  text-left"></div>
+                    <div class="col-lg-6 col-sm-6">
+                        <h2 class="text-center"><em>The Difference</em></h2>
+                        <h5 class="text-center">Intelligent Services vs. Traditional Service</h5>
+                        <br>						
+                        <div id="feature" class="feature-box">
+                            <div id="image-left" class="feature-box-icon">
+                                <img src="images/Feature1.jpg" alt="Brady">
+                            </div>
+                            <div id="info-right" class="feature-box-info">
+                                <p class="tall"><strong>Proactive Response</strong> <br> Service calls are initiated by site requirements, sometimes without <br>a customer call.</p>
+                            </div>
+                        </div>
+						<div id="feature" class="feature-box">
+                            <div id="image-left" class="feature-box-icon">
+                                <img src="images/Feature2.jpg" alt="Brady">
+                            </div>
+                            <div id="info-right" class="feature-box-info">
+                                <p class="tall"><strong>Need-based Maintenance</strong> <br> Maintenance occurs as needed, no waiting period for work.</p>
+                            </div>
+                        </div>
+						<div id="feature" class="feature-box">
+                            <div id="image-left" class="feature-box-icon">
+                                <img src="images/Feature1.jpg" alt="Brady">
+                            </div>
+                            <div id="info-right" class="feature-box-info">
+                                <p class="tall"><strong>Remote Inspections</strong> <br> Remote control room technicians guide on-site technicians toward <br>specific problem areas.</p>
+                            </div>
+                        </div>						
+						<div id="feature" class="feature-box">
+                            <div id="image-left" class="feature-box-icon">
+                                <img src="images/Feature2.jpg" alt="Brady">
+                            </div>
+                            <div id="info-right" class="feature-box-info">
+                                <p class="tall"><strong>Enhanced Insights</strong> <br> Data gathering and analysis happens continously and discovers <br>"hidden" problems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <div class="row">
+                    <!--<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">-->
+                    <div class="col-lg-12 col-sm-12">
+                        <marquee id="fileDisplayArea" behavior="scroll" direction="left"></marquee>  
+                        <fieldset>         
+                            <legend class="text-left header"><h1 >Blog Corner</h1></legend></fieldset>
+
+
+                        <div class="post-preview">
+                            <a href="blog-post.html">
+                                <h3 class="post-title">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </h3>
+                            </a>
+                            <p class="post-meta">Posted by <a href="#">Anonymous</a> on February 31, 2015</p>
+                        </div>
+
+                        <div class="post-preview">
+                            <a href="blog-post.html">
+                                <h3 class="post-title">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </h3>
+                            </a>
+                            <p class="post-meta">Posted by <a href="#">Anonymous</a> on February 31, 2015</p>
+                        </div>
+
+                        <div class="post-preview">
+                            <a href="blog-post.html">
+                                <h3 class="post-title">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </h3>                               
+                            </a>
+                            <p class="post-meta">Posted by <a href="#">Anonymous</a> on February 31, 2015</p>
+                        </div>   				
+                    </div>
+                </div>
+            </div>            
+        </section>       
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+
+                <div class="row">
+                    <fieldset>         
+                        <legend class="text-left header"><h1 >Contact Us</h1></legend></fieldset>
+                        <div class="col-lg-6 col-sm-6">                           
+                            <div class="">
+                                <form class="form-horizontal" method="post" action="/contact">
+                                    <fieldset>  
+										<div class="form-group error-message">
+											 <% if(typeof(contactFormMessage) !== 'undefined') {%>
+											 <span><%= contactFormMessage %></span>
+											 <% } %>
+										</div>   
+
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="glyphicon glyphicon-user"></i></span>
+                                            <div class="col-md-8">
+                                                <input id="name" name="name" type="text" placeholder="Name" class="form-control" required>
+                                            </div>
+                                        </div>       
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="glyphicon glyphicon-briefcase"></i></span>
+                                            <div class="col-md-8">
+                                                <input id="company" name="company" type="text" placeholder="Company" class="form-control" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="glyphicon glyphicon-envelope"></i></span>
+                                            <div class="col-md-8">
+                                                <input id="email" name="email" type="email" placeholder="Email Address" class="form-control" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="glyphicon glyphicon-earphone"></i></span>
+                                            <div class="col-md-8">
+                                                <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="glyphicon glyphicon-pencil"></i></span>
+                                            <div class="col-md-8">
+                                                <textarea class="form-control" id="message" name="message" placeholder="Enter your message for us here." rows="7" required></textarea>
+                                            </div>
+                                        </div>
+                                        <!--Form for captcha -->
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i class=""></i></span>
+                                            <div class="col-md-4">
+                                                <input id="captchaEntered" name="captchaEntered" type="number" placeholder=" Enter captcha" class="form-control" required>												
+                                            </div>
+											<div class="col-md-1">
+                                                
+                                            </div>
+											<div class="col-md-3">
+                                                <img src="data:image/jpeg;base64,<%= captchaCode %>"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-md-12 text-center">
+                                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-sm-2">                              
+
+                        </div>
+                        <div class="col-lg-4 col-sm-4"> 
+						    <div>
+                                <h4>Call Us @: <b>(800) 849-1915</b></h4>
+								<p></p>
+                            </div> 
+							
+						   <div>
+                                <h3><u>Locations:</u></h3>
+                            </div>
+							
+                            <div>
+                                <h4>Greensboro Office</h4>
+                                <p><i>1915 North Church Street</i></p>
+                                <p><i>Greensboro, NC  27405</i></p>
+                            </div>
+                            <br>
+                            <div>
+                                <fieldset> <h4>Raleigh Office</h4></fieldset> 
+                                <p><i>401 Kitty Hawk Drive</i></p>
+                                <p><i>Morrisville, NC  27560</i></p>
+                            </div>
+                            <br>
+                            <div>
+                                <fieldset> <h4>Wilmington Office</h4></fieldset> 
+                                <p><i>6736-A Netherlands Driv</i></p>
+                                <p><i>Wilmington, NC  28405</i></p>
+                            </div>	
+                        </div>
+
+                </div>
+				 <fieldset>         
+                        <legend class="text-left header"></legend></fieldset>
+				<div class="row">
+					<div class="col-md-4">
+                        <ul class="list-inline quicklinks">
+                            <li><a href="http://www.bradyservices.com/privacy.html">Privacy Policy</a>
+                            </li>
+                            <li><a href="#">Terms of Use</a>
+                            </li>
+                        </ul>
+                    </div>                   
+                    <div class="col-md-4">
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://twitter.com/bradytrane"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/BradyHVAC"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/company/brady-trane"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                            <li><a href="https://www.youtube.com/user/BradyTrane"><i class="fa fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+					<div class="col-md-4">
+                        <span class="copyright">Copyright &copy; 2015 Brady Trane Services Inc.</span>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Drop down java script -->
+        <script src="js/dropdown.js"></script>
+        <!-- Scrolling Nav JavaScript -->
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/scrolling-nav.js"></script>
+        <script src="js/read-facts.js"></script>
+
+    </body> 
+</html>                                	

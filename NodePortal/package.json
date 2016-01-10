@@ -1,0 +1,29 @@
+{
+  "name": "NodePortal",
+  "description": "Brady Intelligent services Portal",
+  "version": "1.0.0",
+  "author": "",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt-nodejs": "*",
+    "body-parser": "*",
+    "bookshelf": "*",
+    "browserify": "*",
+    "cookie-parser": "*",
+    "dragula": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-http-proxy": "*",
+    "express-session": "*",
+    "fs": "*",
+    "http-post": "*",
+    "http-proxy": "*",
+    "knex": "*",
+    "mysql": "*",
+    "nodemailer": "*",
+    "passport": "*",
+    "passport-local": "*",
+    "request": "*",
+    "captchapng": "*"
+  }
+}

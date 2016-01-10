@@ -1,0 +1,57 @@
+﻿//@author Kiran Gaitonde
+
+drop database if exists portalDB
+
+create database if not exists portalDB
+
+use portalDB
+
+drop table if exists users;
+
+create table if not exists users(
+   userId integer primary key auto_increment,
+   username varchar(100) unique,
+   password varchar(100),
+   firstname varchar(100),
+   lastname varchar(100),
+   emailId varchar(100) unique,
+   address1 varchar(100),
+   address2 varchar(100),
+   skypd varchar(100),
+   role varchar(100)
+)engine=innodb;
+
+drop table if exists projects;
+
+create table if not exists projects(
+   projectId integer primary key auto_increment,
+   projectname varchar(100) unique,
+   projecturl varchar(100) unique,
+   projectdesc varchar(500)
+)engine=innodb;
+
+
+drop table if exists userproject;
+
+create table if not exists userproject(
+   upId integer primary key auto_increment,   
+   username varchar(100),
+   projectname varchar(100),
+   projecturl varchar(100)
+)engine=innodb;
+
+---------------------------------------------
+
+
+INSERT INTO users (
+   username ,
+   password ,
+   firstname ,
+   lastname ,
+   emailId ,
+   address1 ,
+   address2 ,
+   skypd ,
+   role )
+VALUES ("kiran", "kiran", "Kiran" , "Gaitonde", "kiran.gaitonde@bradyservices.com",
+"Greensboro", "NC", "kiran", "admin");

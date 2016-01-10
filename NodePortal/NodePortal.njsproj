@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>NodePortal</Name>
+    <RootNamespace>NodePortal</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>def9eb0c-4193-4126-bf92-23a0e75e1b9b</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>bin\www</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.js" />
+    <Compile Include="assignUP.js" />
+    <Compile Include="bin\www" />
+    <Compile Include="bundle.js" />
+    <Compile Include="db.js" />
+    <Compile Include="model.js" />
+    <Compile Include="properties.js" />
+    <Compile Include="route.js" />
+    <Compile Include="utility.js" />
+    <Compile Include="views\dragula\classes.js" />
+    <Compile Include="views\dragula\dist\dragula.js" />
+    <Compile Include="views\dragula\dist\dragula.min.js" />
+    <Compile Include="views\dragula\dragula.js" />
+    <Compile Include="views\dragula\example\example.js" />
+    <Compile Include="views\dragula\example\example.min.js" />
+    <Compile Include="views\dragula\node_modules\contra\a.js" />
+    <Compile Include="views\dragula\node_modules\contra\concurrent.js" />
+    <Compile Include="views\dragula\node_modules\contra\CONCURRENTLY.js" />
+    <Compile Include="views\dragula\node_modules\contra\contra.js" />
+    <Compile Include="views\dragula\node_modules\contra\contra.shim.js" />
+    <Compile Include="views\dragula\node_modules\contra\curry.js" />
+    <Compile Include="views\dragula\node_modules\contra\debounce.js" />
+    <Compile Include="views\dragula\node_modules\contra\dist\contra.js" />
+    <Compile Include="views\dragula\node_modules\contra\dist\contra.min.js" />
+    <Compile Include="views\dragula\node_modules\contra\dist\contra.shim.js" />
+    <Compile Include="views\dragula\node_modules\contra\dist\contra.shim.min.js" />
+    <Compile Include="views\dragula\node_modules\contra\each.js" />
+    <Compile Include="views\dragula\node_modules\contra\emitter.js" />
+    <Compile Include="views\dragula\node_modules\contra\errored.js" />
+    <Compile Include="views\dragula\node_modules\contra\filter.js" />
+    <Compile Include="views\dragula\node_modules\contra\map.js" />
+    <Compile Include="views\dragula\node_modules\contra\node_modules\atoa\atoa.js" />
+    <Compile Include="views\dragula\node_modules\contra\node_modules\ticky\ticky-browser.js" />
+    <Compile Include="views\dragula\node_modules\contra\node_modules\ticky\ticky.js" />
+    <Compile Include="views\dragula\node_modules\contra\noop.js" />
+    <Compile Include="views\dragula\node_modules\contra\once.js" />
+    <Compile Include="views\dragula\node_modules\contra\queue.js" />
+    <Compile Include="views\dragula\node_modules\contra\SERIAL.js" />
+    <Compile Include="views\dragula\node_modules\contra\series.js" />
+    <Compile Include="views\dragula\node_modules\contra\shim.js" />
+    <Compile Include="views\dragula\node_modules\contra\test\capped.js" />
+    <Compile Include="views\dragula\node_modules\contra\test\methods.js" />
+    <Compile Include="views\dragula\node_modules\contra\waterfall.js" />
+    <Compile Include="views\dragula\node_modules\contra\_each.js" />
+    <Compile Include="views\dragula\node_modules\contra\_filter.js" />
+    <Compile Include="views\dragula\node_modules\contra\_map.js" />
+    <Compile Include="views\dragula\node_modules\crossvent\dist\crossvent.js" />
+    <Compile Include="views\dragula\node_modules\crossvent\dist\crossvent.min.js" />
+    <Compile Include="views\dragula\node_modules\crossvent\gulpfile.js" />
+    <Compile Include="views\dragula\node_modules\crossvent\node_modules\custom-event\index.js" />
+    <Compile Include="views\dragula\node_modules\crossvent\node_modules\custom-event\test\test.js" />
+    <Compile Include="views\dragula\node_modules\crossvent\src\crossvent.js" />
+    <Compile Include="views\dragula\node_modules\crossvent\src\eventmap.js" />
+    <Compile Include="views\dragula\test\cancel.js" />
+    <Compile Include="views\dragula\test\classes.js" />
+    <Compile Include="views\dragula\test\containers.js" />
+    <Compile Include="views\dragula\test\defaults.js" />
+    <Compile Include="views\dragula\test\destroy.js" />
+    <Compile Include="views\dragula\test\drag.js" />
+    <Compile Include="views\dragula\test\drake-api.js" />
+    <Compile Include="views\dragula\test\end.js" />
+    <Compile Include="views\dragula\test\events.js" />
+    <Compile Include="views\dragula\test\lib\events.js" />
+    <Compile Include="views\dragula\test\public-api.js" />
+    <Compile Include="views\dragula\test\remove.js" />
+    <Compile Include="views\js\bundle.js" />
+    <Compile Include="views\js\drag.js" />
+    <Compile Include="views\js\dragula.js" />
+    <Compile Include="views\js\dragula.min.js" />
+    <Compile Include="views\js\dropdown.js" />
+    <Compile Include="views\js\jquery.easing.min.js" />
+    <Compile Include="views\js\main.js" />
+    <Compile Include="views\js\read-facts.js" />
+    <Compile Include="views\js\scrolling-nav.js" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="sql.txt" />
+    <Content Include="views\404.ejs" />
+    <Content Include="views\admin.ejs" />
+    <Content Include="views\admin2.ejs" />
+    <Content Include="views\adminWorking.ejs" />
+    <Content Include="views\blog-post.html" />
+    <Content Include="views\change-pwd.ejs" />
+    <Content Include="views\dragula\.editorconfig" />
+    <Content Include="views\dragula\.jshintignore" />
+    <Content Include="views\dragula\.jshintrc" />
+    <Content Include="views\dragula\.npmignore" />
+    <Content Include="views\dragula\.travis.yml" />
+    <Content Include="views\dragula\bower.json" />
+    <Content Include="views\dragula\changelog.markdown" />
+    <Content Include="views\dragula\contributing.markdown" />
+    <Content Include="views\dragula\dist\dragula.css" />
+    <Content Include="views\dragula\dist\dragula.min.css" />
+    <Content Include="views\dragula\dragula.styl" />
+    <Content Include="views\dragula\example\example.css" />
+    <Content Include="views\dragula\favicon.ico" />
+    <Content Include="views\dragula\index.html" />
+    <Content Include="views\dragula\license" />
+    <Content Include="views\dragula\node_modules\contra\.editorconfig" />
+    <Content Include="views\dragula\node_modules\contra\.jshintrc" />
+    <Content Include="views\dragula\node_modules\contra\.npmignore" />
+    <Content Include="views\dragula\node_modules\contra\.travis.yml" />
+    <Content Include="views\dragula\node_modules\contra\bower.json" />
+    <Content Include="views\dragula\node_modules\contra\CHANGELOG.md" />
+    <Content Include="views\dragula\node_modules\contra\LICENSE" />
+    <Content Include="views\dragula\node_modules\contra\node_modules\atoa\license" />
+    <Content Include="views\dragula\node_modules\contra\node_modules\atoa\package.json" />
+    <Content Include="views\dragula\node_modules\contra\node_modules\atoa\readme.markdown" />
+    <Content Include="views\dragula\node_modules\contra\node_modules\ticky\license" />
+    <Content Include="views\dragula\node_modules\contra\node_modules\ticky\package.json" />
+    <Content Include="views\dragula\node_modules\contra\node_modules\ticky\readme.markdown" />
+    <Content Include="views\dragula\node_modules\contra\package.json" />
+    <Content Include="views\dragula\node_modules\contra\README.md" />
+    <Content Include="views\dragula\node_modules\contra\test\runner.html" />
+    <Content Include="views\dragula\node_modules\crossvent\.editorconfig" />
+    <Content Include="views\dragula\node_modules\crossvent\.jshintignore" />
+    <Content Include="views\dragula\node_modules\crossvent\.jshintrc" />
+    <Content Include="views\dragula\node_modules\crossvent\.npmignore" />
+    <Content Include="views\dragula\node_modules\crossvent\bower.json" />
+    <Content Include="views\dragula\node_modules\crossvent\CHANGELOG.md" />
+    <Content Include="views\dragula\node_modules\crossvent\LICENSE" />
+    <Content Include="views\dragula\node_modules\crossvent\node_modules\custom-event\.npmignore" />
+    <Content Include="views\dragula\node_modules\crossvent\node_modules\custom-event\.travis.yml" />
+    <Content Include="views\dragula\node_modules\crossvent\node_modules\custom-event\History.md" />
+    <Content Include="views\dragula\node_modules\crossvent\node_modules\custom-event\Makefile" />
+    <Content Include="views\dragula\node_modules\crossvent\node_modules\custom-event\package.json" />
+    <Content Include="views\dragula\node_modules\crossvent\node_modules\custom-event\README.md" />
+    <Content Include="views\dragula\node_modules\crossvent\package.json" />
+    <Content Include="views\dragula\node_modules\crossvent\README.md" />
+    <Content Include="views\dragula\package.json" />
+    <Content Include="views\dragula\readme.markdown" />
+    <Content Include="views\dragula\resources\demo.png" />
+    <Content Include="views\dragula\resources\eyes.png" />
+    <Content Include="views\dragula\resources\icon.png" />
+    <Content Include="views\dragula\resources\icon.svg" />
+    <Content Include="views\dragula\resources\logo.png" />
+    <Content Include="views\dragula\resources\logo.svg" />
+    <Content Include="views\dragula\resources\patreon.svg" />
+    <Content Include="views\email-pwd.ejs" />
+    <Content Include="views\fact.txt" />
+    <Content Include="views\favicon.ico" />
+    <Content Include="views\home.ejs" />
+    <Content Include="views\images\background.jpg" />
+    <Content Include="views\images\BradyWall.JPG" />
+    <Content Include="views\images\BradyWallColor.JPG" />
+    <Content Include="views\images\Feature1.jpg" />
+    <Content Include="views\images\Feature2.jpg" />
+    <Content Include="views\images\Feature3.jpg" />
+    <Content Include="views\images\greensboroBW.jpg" />
+    <Content Include="views\images\logo.jpg" />
+    <Content Include="views\index.ejs" />
+    <Content Include="views\login.ejs" />
+    <Content Include="views\maintenance.ejs" />
+    <Content Include="views\styles\dragula.css" />
+    <Content Include="views\styles\dragula.min.css" />
+    <Content Include="views\styles\main.css" />
+    <Content Include="views\styles\scrolling-nav.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="views\" />
+    <Folder Include="views\dragula\" />
+    <Folder Include="views\dragula\dist\" />
+    <Folder Include="views\dragula\example\" />
+    <Folder Include="views\dragula\node_modules\" />
+    <Folder Include="views\dragula\node_modules\contra\" />
+    <Folder Include="views\dragula\node_modules\contra\dist\" />
+    <Folder Include="views\dragula\node_modules\contra\node_modules\" />
+    <Folder Include="views\dragula\node_modules\contra\node_modules\atoa\" />
+    <Folder Include="views\dragula\node_modules\contra\node_modules\ticky\" />
+    <Folder Include="views\dragula\node_modules\contra\test\" />
+    <Folder Include="views\dragula\node_modules\crossvent\" />
+    <Folder Include="views\dragula\node_modules\crossvent\dist\" />
+    <Folder Include="views\dragula\node_modules\crossvent\node_modules\" />
+    <Folder Include="views\dragula\node_modules\crossvent\node_modules\custom-event\" />
+    <Folder Include="views\dragula\node_modules\crossvent\node_modules\custom-event\test\" />
+    <Folder Include="views\dragula\node_modules\crossvent\src\" />
+    <Folder Include="views\dragula\resources\" />
+    <Folder Include="views\dragula\test\" />
+    <Folder Include="views\dragula\test\lib\" />
+    <Folder Include="views\images\" />
+    <Folder Include="views\js\" />
+    <Folder Include="views\styles\" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
